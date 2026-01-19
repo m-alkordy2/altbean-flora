@@ -1,0 +1,302 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --primary-color : rgb(46, 126, 46);
+    --sec-color : #EFF8FF ;
+    --primary-color-opacity : #02559525 ;
+    --white-spacing-x : 70px ;
+}
+.secion-title {
+    font-size: 39px;
+    color: #222222;
+}
+
+.section-subtitle {
+    color: #22222280;
+    margin-bottom: 56px;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.d-inline {
+    display: inline !important;
+}
+
+.conteiner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80vw;
+    margin: 0 auto;
+    padding: 16px;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+header {
+    height: 100vh;
+    background-color: #EFF8FF;
+    background-image: url('./../img/hero-bg.png');
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: 50%;
+    nav {
+        width: 100vw;
+        padding: 17px var(--white-spacing-x);
+        background-color: #EFF8FF;
+        position: fixed;
+        top: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            font-weight: 500;
+        }
+
+        .login {
+            width: 135px;
+            height: 38px;
+            border-radius: 6px;
+            background: var(--primary-color);
+            color: #F5F5F5;
+            font-size: 14px;
+            border: none;
+            cursor: pointer;
+
+            &:hover {
+                background: none ;
+                border: 4px solid var(--primary-color);
+                color: var(--primary-color);
+            }
+        }
+        .nav-menu {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+    }
+    .hero {
+        padding-top: 122px;
+        color: #222222;
+        h1 {
+            margin: 0 var(--white-spacing-x);
+            max-width: 549px;
+            font-weight: 700;
+            font-size: 60px;
+            line-height: 80px;
+            margin-bottom: 20px;
+        }
+        .description {
+            margin: 0 var(--white-spacing-x);
+            max-width: 423px;
+            color: #22222280;
+            margin-bottom: 50px;
+        }
+
+        .info {
+            margin: 0 var(--white-spacing-x);
+            max-width: 868px;
+            padding: 20px 58px;
+            min-height: 100px;
+            border-radius: 16px;
+            background-color: #FFFFFFCC;
+            backdrop-filter: blur(16px);
+            display: flex;
+            justify-content: space-between;
+            gap: 24px;
+
+            .card {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+
+                .icon {
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 50%;
+                    background-color: var(--primary-color-opacity);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                h2 {
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+                p {
+                    line-height: 24px;
+                    color: #22222280;
+                }
+            }
+        }
+    }
+}
+
+.works {
+    margin: 94px var(--white-spacing-x);
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+
+        .card {
+            min-height: 255px;
+            padding: 30px 40px 80px;
+            border-radius: 15px;
+            max-width: 380px;
+            cursor: pointer;
+            h2 {
+                margin: 20px 0 10px;
+            }
+            &:hover {
+                background-color: var(--primary-color);
+                color: #F5F5F5;
+                svg {
+                    path {
+                        fill: #ffff;
+                    }
+                    
+                }
+            }
+        }
+    }
+}
+
+.deals {
+    
+    .filter {
+        width: 100%;
+        overflow-x: auto;
+        div {
+            width: 829px;
+            display: flex;
+            justify-content: space-between;
+            margin : 60px var(--white-spacing-x) ;
+
+            button {
+                flex-shrink: 0;
+                border: none;
+                background: none;
+
+                &.active {
+                    color: var(--primary-color);
+                    border-bottom: 3px solid var(--primary-color);
+                    padding-bottom: 7px ;
+                }
+            }
+        }
+
+    }
+    .container {
+        display: flex;
+        justify-content: space-between;
+        margin: 40px var(--white-spacing-x);
+        .card {
+            position: relative;
+            width: 387px;
+            padding: 14px;
+            height: 300px;
+
+            img {
+                position: absolute;
+                width: 100%;
+                top: 0;
+                left: 0;
+                z-index: -1;
+            }
+            .propreties {
+                display: flex;
+                gap: 7px;
+                h2 {
+                    font-weight: 400;
+                    font-size: 12px;
+                    padding: 6px 12px;
+                    color: #FFFFFF;
+                    border: 1px solid #FFFFFF;
+                    border-radius: 5px;
+                    background-color: #22222266;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width : 992px) {
+
+    html {
+        font-size: 31.25%;
+    }
+    
+    :root {
+        --white-spacing-x : 20px ;
+    }
+
+    header{
+        background-size: 100%;
+        nav {
+            ul , .login {
+                display: none;
+            }
+            .nav-menu {
+                display: block;
+            }
+        }
+        .hero {
+            h1 {
+                margin-bottom: 20px;
+                font-size: 35px;
+                line-height: 46px;
+            }
+            .description {
+                margin-bottom: 50px;
+                font-size: 14px;
+            }
+            .info {
+                flex-direction: column;
+                margin: 0;
+                border-radius: 0;
+                padding: 20px;
+            }
+        }
+    }
+    .works {
+        .container {
+            flex-direction: column;
+            .card {
+                max-width: 100%;
+                &:nth-child(2){
+                background-color: var(--primary-color);
+                color: #F5F5F5;
+                svg {
+                    path {
+                        fill: #ffff;
+                    }
+                }
+                }
+            }
+        }
+    }
+    .deals {
+        .filter {
+            button {
+                margin-right: 0;
+            }
+        }
+    }
+}
